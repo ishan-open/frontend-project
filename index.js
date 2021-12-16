@@ -1,5 +1,5 @@
-const emojiList = ['🤗', '🍀', '(⚈ ̫ ⚈)', '😀', '😁', '😅', '😇', '😉'];
-const p = document.querySelector('p');
-p.addEventListener('click', () => {
-  p.innerText = emojiList[Math.floor((Math.random() * 100) % emojiList.length)];
-});
+const  btns = document.getElementsByClassName("btn");
+let btn
+for(btn of btns){
+  btn.onclick = (event) => console.log(event.currentTarget.value)
+}

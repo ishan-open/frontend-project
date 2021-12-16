@@ -1,0 +1,82 @@
+$backgroundColor: #000;
+$textColor: #fff;
+
+@mixin font-config {
+  font-family: Helvetica, Arial,sans-serif;
+  font-style: normal;
+  color: #fff;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  .container {
+    background-color: #222;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 512px;
+    height: 410px;
+    .title {
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 150px;
+      h1 {
+        @include font-config();
+        font-size: 65px;
+        margin-left: 23px;
+      }
+    }
+
+    .list {
+        margin-top: 0;
+      height: 170px;
+      margin-left: 100px;
+      .list-row {
+        @include font-config();
+        font-size: 25px;
+        margin-top: 7px;
+      }
+    }
+
+    .icon-container {
+        margin-top: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      height: 100px;
+      .btn {
+          background-color: #222;
+          border:none;
+          margin-bottom: 2px;
+          
+        .icon {
+          width: 50px;
+          height: 50px;
+          opacity: 0.95;
+          &:hover {
+              transform: scale(1.2);
+              opacity: 1;
+          }
+        }
+        #any{
+            height: 40px;
+            
+        }
+
+        .icon-txt {
+          @include font-config();
+          font-size: 18px;
+        }
+        
+      }
+    }
+  }
+}

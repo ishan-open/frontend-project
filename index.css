@@ -1,46 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  position: fixed;
-  inset: 0;
+  width: 100%;
+}
+body .container {
+  background-color: #222;
   margin: auto;
-  user-select: none;
-}
-
-p {
-  font-size: 5rem;
-  color: white;
-  width: 500px;
-  height: 500px;
-  margin: auto;
-  background-color: cornflowerblue;
-  background-image: linear-gradient(19deg, cornflowerblue 0%, crimson 100%);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  animation: morphing 10s infinite;
-  overflow: hidden;
-  cursor: url(https://cdn.custom-cursor.com/db/7476/32/minimal-apple-cursor.png),
-    default;
-}
-
-/* https://codepen.io/nickylew/pen/GYMoKM */
-@keyframes morphing {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    box-shadow: 15px 15px 50px rgba(0, 0, 0, 0.2);
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-    box-shadow: -10px -5px 50px rgba(0, 0, 0, 0.2);
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-  }
-}
-
-.center {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 512px;
+  height: 410px;
+}
+body .container .title {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  height: 150px;
 }
+body .container .title h1 {
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+  font-size: 65px;
+  margin-left: 23px;
+}
+body .container .list {
+  margin-top: 0;
+  height: 170px;
+  margin-left: 100px;
+}
+body .container .list .list-row {
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+  font-size: 25px;
+  margin-top: 7px;
+}
+body .container .icon-container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+body .container .icon-container .btn {
+  background-color: #222;
+  border: none;
+  margin-bottom: 2px;
+}
+body .container .icon-container .btn .icon {
+  width: 50px;
+  height: 50px;
+  opacity: 0.95;
+}
+body .container .icon-container .btn .icon:hover {
+  transform: scale(1.2);
+  opacity: 1;
+}
+body .container .icon-container .btn #any {
+  height: 40px;
+}
+body .container .icon-container .btn .icon-txt {
+  font-family: Helvetica, Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+  font-size: 18px;
+}
+
+/*# sourceMappingURL=index.css.map */

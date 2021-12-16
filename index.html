@@ -4,11 +4,61 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project Name</title>
+    <title>Photopea</title>
     <link rel="stylesheet" href="./index.css" />
   </head>
-  <body class="center">
-    <p class="center">My App</p>
+  <body>
+    <div class="container">
+      <div class="title">
+        <img src="./assets/Photopea_logo.svg.png" width="89px" height="89px" />
+        <h1>Photopea</h1>
+      </div>
+
+      <ul class="list">
+        <li class="list-row">New Project</li>
+        <li class="list-row">Open From Computer</li>
+        <li class="list-row">PSD Templates</li>
+        <li class="list-row">Demo: pea.psd milk.sketch</li>
+      </ul>
+
+      <div class="icon-container">
+        <button class="btn" type="button" value=".PSD">
+          <img src="./assets/PSD.svg" class="icon" />
+          <span class="icon-txt">.PSD</span>
+        </button>
+        <button class="btn" type="button" value=".AI">
+          <img src="./assets/AI.svg" class="icon" />
+          <span class="icon-txt">.AI</span>
+        </button>
+        <button class="btn" type="button" value=".XD">
+          <img src="./assets/XD.svg" class="icon" />
+          <span class="icon-txt">.XD</span>
+        </button>
+        <button class="btn" type="button" value=".sketch">
+          <img src="./assets/sketch.svg" class="icon" />
+          <span class="icon-txt">.sketch</span>
+        </button>
+        <button class="btn" type="button" value=".PDF">
+          <img src="./assets/PDF.svg" class="icon" />
+          <span class="icon-txt">.PDF</span>
+        </button>
+        <button class="btn" type="button" value=".XCF">
+          <img src="./assets/XCF.svg" class="icon" />
+          <span class="icon-txt">.XCF</span>
+        </button>
+        <button class="btn" type="button" value="RAW">
+          <img src="./assets/RAW.svg" class="icon" />
+          <span class="icon-txt">RAW</span>
+        </button>
+        <button class="btn" type="button" value="ANY" >
+          <img src="./assets/ANY.svg" class="icon" id="any" style="margin-top: 10px;"/>
+          <span class="icon-txt">ANY</span>
+        </button>
+      </div>
+    </div>
+    <script>
+      const BtnPress = () => {alert("hi")}
+    </script>
   </body>
   <script src="index.js"></script>
 </html>
