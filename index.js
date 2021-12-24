@@ -1,5 +1,16 @@
-const emojiList = ['🤗', '🍀', '(⚈ ̫ ⚈)', '😀', '😁', '😅', '😇', '😉'];
-const p = document.querySelector('p');
-p.addEventListener('click', () => {
-  p.innerText = emojiList[Math.floor((Math.random() * 100) % emojiList.length)];
-});
+
+// comment.addEventListener('click', () => {
+//     console.log('You clicked on comment')
+// });
+// retweet.addEventListener('click', () => {
+//     console.log('You clicked on retweet')
+// });
+// like.addEventListener('click', () => {
+//     console.log('You clicked on like')
+// });
+// share.addEventListener('click', () => {
+//     console.log('You clicked on share')
+// });
+
+
+
