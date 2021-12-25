@@ -15,6 +15,14 @@
   </div>
   <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                     First Project With html css js                      -->
+  <!-- ----------------------------------------------------------------------- -->
+
+
+
   <!-- <div class="username-container">
       <div class="img">
         <img class="username-img" src="./img/person-icon.png" alt="">
@@ -55,107 +63,301 @@
   </div> -->
 
 
-  <script>
-    // function div(children) {
-    //   return React.createElement(
-    //     'div',
-    //     { 'className': 'cool' },
-    //     React.createElement('h1', { 'data-all': 'cool' }, 'hello world'),
-    //   );
+  <!-- ----------------------------------------------------------------------- -->
+  <!--                              End First Prt                              -->
+  <!-- ----------------------------------------------------------------------- -->
+
+
+
+  <script type="text/babel">
+
+
+    function clacDate() {
+      let now = new Date();
+      let hour = now.toLocaleTimeString();
+      let day = now.getUTCDate();
+      let month = now.getUTCMonth();
+      let year = now.getUTCFullYear()
+      let str = '';
+      switch (month) {
+        case 0:
+          month = 'Jan';
+          break;
+        case 1:
+          month = 'Feb';
+          break;
+        case 2:
+          month = 'Mar';
+          break;
+        case 3:
+          month = 'Apr';
+          break;
+        case 4:
+          month = 'May';
+          break;
+        case 5:
+          month = 'Jun';
+          break;
+        case 6:
+          month = 'Jul';
+          break;
+        case 7:
+          month = 'Aug';
+          break;
+        case 8:
+          month = 'Sep';
+          break;
+        case 9:
+          month = 'Oct';
+          break;
+        case 10:
+          month = 'Nov';
+          break;
+        case 11:
+          month = 'Dec';
+          break;
+      }
+
+      return (str = hour + " . " + month + " " + day + " " + year);
+    }
+
+
+
+
+
+
+    //****************************************       COMPONENT AND PROPS PROJECT       ******************************************
+
+
+
+
+    // function MakeDiv({ className, children, onClick }) {
+
+    //   return <div className={className} onClick={onClick}>{children}</div>;
+
+    // }
+
+    // function DrawImg({ className, src }) {
+    //   return <img className={className} src={src} />
+    // }
+
+
+    // function H3({ className, children }) {
+    //   return <h3 className={className}>{children}</h3>;
+    // }
+    // function H4({ className, children }) {
+    //   return <h4 className={className}>{children}</h4>;
+    // }
+    // function P({ className, children }) {
+    //   return <p className={className}>{children}</p>;
+    // }
+
+    // const divImg = ({ children }) => <div>{children}</div>
+
+
+
+
+
+
+    // const imgProps = {
+    //   img: DrawImg
+    // }
+
+    // const divProps = {
+    //   div: MakeDiv,
+    //   h3: H3,
+    //   h4: H4,
+    //   p: P
     // }
 
 
 
-    const img = React.createElement('img', { className: 'username-img', src: './img/person-icon.png' })
-    const divImg = React.createElement('div', { className: 'img' }, img)
-
-    const name = React.createElement('h3', { children: 'Name', className: 'name' })
-    const usernameSet = React.createElement('h4', { children: '@Username', className: 'username-set' })
-    const username = React.createElement('div', { className: 'username' }, name, usernameSet)
-    const usernameContainer = React.createElement('div', { className: 'username-container' }, divImg, username);
-
-    const p = React.createElement('p', { children: 'Your tweet here!', className: 'tweet-p' })
-    const tweet = React.createElement('div', { className: 'tweet' }, p);
 
 
+    // function App() {
+    //   const ClassNameComponent = divProps.div;
+    //   const ImgComponent = imgProps.img;
+    //   const H3Component = divProps.h3;
+    //   const H4Component = divProps.h4;
+    //   const PComponent = divProps.p;
 
-    let now = new Date();
-    let hour = now.toLocaleTimeString();
-    let day = now.getUTCDate();
-    let month = now.getUTCMonth();
-    let year = now.getUTCFullYear()
 
-    switch (month) {
-      case 0:
-        month = 'Jan';
-        break;
-      case 1:
-        month = 'Feb';
-        break;
-      case 2:
-        month = 'Mar';
-        break;
-      case 3:
-        month = 'Apr';
-        break;
-      case 4:
-        month = 'May';
-        break;
-      case 5:
-        month = 'Jun';
-        break;
-      case 6:
-        month = 'Jul';
-        break;
-      case 7:
-        month = 'Aug';
-        break;
-      case 8:
-        month = 'Sep';
-        break;
-      case 9:
-        month = 'Oct';
-        break;
-      case 10:
-        month = 'Nov';
-        break;
-      case 11:
-        month = 'Dec';
-        break;
+    //   return (
+
+    //     <ClassNameComponent className="container">
+    //       <ClassNameComponent className="username-container">
+    //         <ClassNameComponent className="img" >
+    //           <ImgComponent className="username-img" src="./img/person-icon.png" />
+    //         </ClassNameComponent>
+    //         <ClassNameComponent className="username">
+    //           <H3Component className="name">Name</H3Component>
+    //           <H4Component className="username-set">@Username</H4Component>
+    //         </ClassNameComponent>
+    //       </ClassNameComponent>
+
+    //       <ClassNameComponent className="tweet">
+    //         <PComponent className="tweet-p">Your tweet here!</PComponent>
+    //       </ClassNameComponent>
+
+    //       <ClassNameComponent className="time" />
+
+    //       <ClassNameComponent className="arrow">
+    //         <ImgComponent className="arrow-icon" src="./img/arrow.png" />
+    //       </ClassNameComponent>
+
+    //       <ClassNameComponent className="icons-container">
+    //         <ClassNameComponent className="comment" onClick={() => { console.log('You Clicked On Comment') }}>
+    //           <ImgComponent className="comment-icon" src="./img/Vector.png" />
+    //           <H3Component>44</H3Component>
+    //         </ClassNameComponent>
+    //         <ClassNameComponent className="retweet" onClick={() => { console.log('You Clicked On Retweet') }}>
+    //           <ImgComponent className="retweet-icon" src="./img/retweet.png" />
+    //           <H3Component>3</H3Component>
+    //         </ClassNameComponent>
+    //         <ClassNameComponent className="like" onClick={() => { console.log('You Clicked On Like') }}>
+    //           <ImgComponent className="like-icon" src="./img/heart.png" />
+    //           <H3Component>3,500</H3Component>
+    //         </ClassNameComponent>
+    //         <ClassNameComponent className="share" onClick={() => { console.log('You Clicked On Share') }}>
+    //           <ImgComponent className="share-icon" src="./img/share.png" />
+
+    //         </ClassNameComponent>
+    //       </ClassNameComponent>
+
+
+
+
+    //     </ClassNameComponent >
+
+
+
+
+    //   );
+    // }
+    //****************************************   END OF COMPONENT AND PROPS PROJECT       ******************************************
+
+
+    //**********************************************    COMPONENT BASE REACT    *******************************************
+
+    function App() {
+
+
+      return (
+        <div className="container">
+          <div className="username-container">
+            <div className="img">
+              <img className="username-img" src="./img/person-icon.png" alt="" />
+            </div>
+            <div className="username">
+              <h3 className="name">Name</h3>
+              <h4 className="username-set">@Username</h4>
+            </div>
+          </div>
+
+          <div className="tweet">
+            <p className="tweet-p">Your tweet here!</p>
+          </div>
+
+          <div className="time">
+
+          </div>
+
+
+          <div className="arrow">
+            <img className="arrow-icon" src="./img/arrow.png" alt="" />
+
+          </div>
+
+          <div className="icons-container">
+            <div className="comment" onClick={() => console.log('You Clicked On Comment')} >
+              <img className="comment-icon" src="./img/Vector.png" alt="" />
+              <h4>44</h4>
+            </div>
+            <div className="retweet" onClick={() => console.log('You Clicked On Retweet')}>
+              <img className="retweet-icon" src="./img/retweet.png" alt="" />
+              <h3>3</h3>
+            </div>
+            <div className="like" onClick={() => console.log('You Clicked On Like')}>
+              <img className="like-icon" src="./img/heart.png" alt="" />
+              <h3>3,500</h3>
+            </div>
+            <div className="share" onClick={() => console.log('You Clicked On Share')}>
+              <img className="share-icon" src="./img/share.png" alt="" />
+            </div>
+          </div>
+
+        </div>
+
+      )
+
     }
 
-    let str = hour + " . " + month + " " + day + " " + year;
-    const time = React.createElement('div', { children: str, className: 'time' });
-
-    const arrowIcon = React.createElement('img', { className: 'arrow-icon', src: './img/arrow.png' })
-    const arrow = React.createElement('div', { className: 'arrow' }, arrowIcon);
+    //*******************************     END OF COMPONENT BASE REACT   **********************************************************
 
 
-    const h4 = React.createElement('h3', { children: '44' });
-    const commentIcon = React.createElement('img', {
-      className: 'comment-icon', src: './img/Vector.png', onClick: () => { console.log("You clicked on Comment!") }
-    })
-    const comment = React.createElement('div', { className: 'comment' }, commentIcon, h4);
-
-    const h3 = React.createElement('h3', { children: '3' });
-    const retweetIcon = React.createElement('img', { className: 'retweet-icon', src: './img/retweet.png', onClick: () => { console.log("You clicked on retweet!") } })
-    const retweet = React.createElement('div', { className: 'retweet' }, retweetIcon, h3);
-
-    const h31 = React.createElement('h3', { children: '3500' });
-    const likeIcon = React.createElement('img', { className: 'like-icon', src: './img/heart.png', onClick: () => { console.log("You clicked on like!") } })
-    const like = React.createElement('div', { className: 'like' }, likeIcon, h31);
+    // ************************       Second Project With React include Create Element      ***********************************
 
 
-    const shareIcon = React.createElement('img', { className: 'share-icon', src: './img/share.png', onClick: () => { console.log("You clicked on share!") } })
-    const share = React.createElement('div', { className: 'like' }, shareIcon);
+    //const img = React.createElement('img', {className: 'username-img', src: './img/person-icon.png' })
+
+    // const img = (<img className="username-img" src='./img/person-icon.png' />)
+
+    // const divImg = React.createElement('div', {className: 'img' }, img)
+
+    // const name = React.createElement('h3', {children: 'Name', className: 'name' })
+    // const usernameSet = React.createElement('h4', {children: '@Username', className: 'username-set' })
+    // const username = React.createElement('div', {className: 'username' }, name, usernameSet)
+    // const usernameContainer = React.createElement('div', {className: 'username-container' }, divImg, username);
+
+    // const p = React.createElement('p', {children: 'Your tweet here!', className: 'tweet-p' })
+    // const tweet = React.createElement('div', {className: 'tweet' }, p);
+
+    // let str = hour + " . " + month + " " + day + " " + year;
+    // const time = React.createElement('div', {children: str, className: 'time' });
+
+    // const arrowIcon = React.createElement('img', {className: 'arrow-icon', src: './img/arrow.png' })
+    // const arrow = React.createElement('div', {className: 'arrow' }, arrowIcon);
+
+
+    // const h4 = React.createElement('h3', {children: '44' });
+    // const commentIcon = React.createElement('img', {
+    //   className: 'comment-icon', src: './img/Vector.png', onClick: () => {console.log("You clicked on Comment!")}
+    // })
+    // const comment = React.createElement('div', {className: 'comment' }, commentIcon, h4);
+
+    // const h3 = React.createElement('h3', {children: '3' });
+    // const retweetIcon = React.createElement('img', {className: 'retweet-icon', src: './img/retweet.png', onClick: () => {console.log("You clicked on retweet!")} })
+    // const retweet = React.createElement('div', {className: 'retweet' }, retweetIcon, h3);
+
+    // const h31 = React.createElement('h3', {children: '3500' });
+    // const likeIcon = React.createElement('img', {className: 'like-icon', src: './img/heart.png', onClick: () => {console.log("You clicked on like!")} })
+    // const like = React.createElement('div', {className: 'like' }, likeIcon, h31);
+
+
+    // const shareIcon = React.createElement('img', {className: 'share-icon', src: './img/share.png', onClick: () => {console.log("You clicked on share!")} })
+    // const share = React.createElement('div', {className: 'like' }, shareIcon);
 
 
 
-    const iconsContainer = React.createElement('div', { className: 'icons-container' }, comment, retweet, like, share);
+    // const iconsContainer = React.createElement('div', {className: 'icons-container' }, comment, retweet, like, share);
 
-    const container = React.createElement('div', { className: 'container' }, usernameContainer, tweet, time, arrow, iconsContainer);
+    // const container = React.createElement('div', {className: 'container' }, usernameContainer, tweet, time, arrow, iconsContainer);
+
+
+    // ********************************       END OF THE SECOND PROJECT   **************************************************
+
+
+
+
+
+
+
     const root = document.getElementById('root');
-    ReactDOM.render(container, root);
+    ReactDOM.render(<App />, root);
+
+
+    const time = document.querySelector('.time');
+    time.textContent = clacDate();
 
 
 
