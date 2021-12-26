@@ -131,166 +131,162 @@
 
 
 
-    // function MakeDiv({ className, children, onClick }) {
+    function MakeDiv({ className, children, onClick }) {
 
-    //   return <div className={className} onClick={onClick}>{children}</div>;
+      return <div className={className} onClick={onClick}>{children}</div>;
 
-    // }
+    }
 
-    // function DrawImg({ className, src }) {
-    //   return <img className={className} src={src} />
-    // }
-
-
-    // function H3({ className, children }) {
-    //   return <h3 className={className}>{children}</h3>;
-    // }
-    // function H4({ className, children }) {
-    //   return <h4 className={className}>{children}</h4>;
-    // }
-    // function P({ className, children }) {
-    //   return <p className={className}>{children}</p>;
-    // }
-
-    // const divImg = ({ children }) => <div>{children}</div>
+    function DrawImg({ className, src }) {
+      return <img className={className} src={src} />
+    }
 
 
+    function H3({ className, children }) {
+      return <h3 className={className}>{children}</h3>;
+    }
+    function H4({ className, children }) {
+      return <h4 className={className}>{children}</h4>;
+    }
+    function P({ className, children }) {
+      return <p className={className}>{children}</p>;
+    }
+
+    const divImg = ({ children }) => <div>{children}</div>
 
 
+    const imgProps = {
+      img: DrawImg
+    }
 
-
-    // const imgProps = {
-    //   img: DrawImg
-    // }
-
-    // const divProps = {
-    //   div: MakeDiv,
-    //   h3: H3,
-    //   h4: H4,
-    //   p: P
-    // }
+    const divProps = {
+      div: MakeDiv,
+      h3: H3,
+      h4: H4,
+      p: P
+    }
 
 
 
 
 
-    // function App() {
-    //   const ClassNameComponent = divProps.div;
-    //   const ImgComponent = imgProps.img;
-    //   const H3Component = divProps.h3;
-    //   const H4Component = divProps.h4;
-    //   const PComponent = divProps.p;
+    function App() {
+      const ClassNameComponent = divProps.div;
+      const ImgComponent = imgProps.img;
+      const H3Component = divProps.h3;
+      const H4Component = divProps.h4;
+      const PComponent = divProps.p;
 
 
-    //   return (
+      return (
 
-    //     <ClassNameComponent className="container">
-    //       <ClassNameComponent className="username-container">
-    //         <ClassNameComponent className="img" >
-    //           <ImgComponent className="username-img" src="./img/person-icon.png" />
-    //         </ClassNameComponent>
-    //         <ClassNameComponent className="username">
-    //           <H3Component className="name">Name</H3Component>
-    //           <H4Component className="username-set">@Username</H4Component>
-    //         </ClassNameComponent>
-    //       </ClassNameComponent>
+        <ClassNameComponent className="container">
+          <ClassNameComponent className="username-container">
+            <ClassNameComponent className="img" >
+              <ImgComponent className="username-img" src="./img/person-icon.png" />
+            </ClassNameComponent>
+            <ClassNameComponent className="username">
+              <H3Component className="name">Name</H3Component>
+              <H4Component className="username-set">@Username</H4Component>
+            </ClassNameComponent>
+          </ClassNameComponent>
 
-    //       <ClassNameComponent className="tweet">
-    //         <PComponent className="tweet-p">Your tweet here!</PComponent>
-    //       </ClassNameComponent>
+          <ClassNameComponent className="tweet">
+            <PComponent className="tweet-p">Your tweet here!</PComponent>
+          </ClassNameComponent>
 
-    //       <ClassNameComponent className="time" />
+          <ClassNameComponent className="time" />
 
-    //       <ClassNameComponent className="arrow">
-    //         <ImgComponent className="arrow-icon" src="./img/arrow.png" />
-    //       </ClassNameComponent>
+          <ClassNameComponent className="arrow">
+            <ImgComponent className="arrow-icon" src="./img/arrow.png" />
+          </ClassNameComponent>
 
-    //       <ClassNameComponent className="icons-container">
-    //         <ClassNameComponent className="comment" onClick={() => { console.log('You Clicked On Comment') }}>
-    //           <ImgComponent className="comment-icon" src="./img/Vector.png" />
-    //           <H3Component>44</H3Component>
-    //         </ClassNameComponent>
-    //         <ClassNameComponent className="retweet" onClick={() => { console.log('You Clicked On Retweet') }}>
-    //           <ImgComponent className="retweet-icon" src="./img/retweet.png" />
-    //           <H3Component>3</H3Component>
-    //         </ClassNameComponent>
-    //         <ClassNameComponent className="like" onClick={() => { console.log('You Clicked On Like') }}>
-    //           <ImgComponent className="like-icon" src="./img/heart.png" />
-    //           <H3Component>3,500</H3Component>
-    //         </ClassNameComponent>
-    //         <ClassNameComponent className="share" onClick={() => { console.log('You Clicked On Share') }}>
-    //           <ImgComponent className="share-icon" src="./img/share.png" />
+          <ClassNameComponent className="icons-container">
+            <ClassNameComponent className="comment" onClick={() => { console.log('You Clicked On Comment') }}>
+              <ImgComponent className="comment-icon" src="./img/Vector.png" />
+              <H3Component>44</H3Component>
+            </ClassNameComponent>
+            <ClassNameComponent className="retweet" onClick={() => { console.log('You Clicked On Retweet') }}>
+              <ImgComponent className="retweet-icon" src="./img/retweet.png" />
+              <H3Component>3</H3Component>
+            </ClassNameComponent>
+            <ClassNameComponent className="like" onClick={() => { console.log('You Clicked On Like') }}>
+              <ImgComponent className="like-icon" src="./img/heart.png" />
+              <H3Component>3,500</H3Component>
+            </ClassNameComponent>
+            <ClassNameComponent className="share" onClick={() => { console.log('You Clicked On Share') }}>
+              <ImgComponent className="share-icon" src="./img/share.png" />
 
-    //         </ClassNameComponent>
-    //       </ClassNameComponent>
-
-
-
-
-    //     </ClassNameComponent >
+            </ClassNameComponent>
+          </ClassNameComponent>
 
 
 
 
-    //   );
-    // }
+        </ClassNameComponent >
+
+
+
+
+      );
+    }
     //****************************************   END OF COMPONENT AND PROPS PROJECT       ******************************************
 
 
     //**********************************************    COMPONENT BASE REACT    *******************************************
 
-    function App() {
+    // function App() {
 
 
-      return (
-        <div className="container">
-          <div className="username-container">
-            <div className="img">
-              <img className="username-img" src="./img/person-icon.png" alt="" />
-            </div>
-            <div className="username">
-              <h3 className="name">Name</h3>
-              <h4 className="username-set">@Username</h4>
-            </div>
-          </div>
+    //   return (
+    //     <div className="container">
+    //       <div className="username-container">
+    //         <div className="img">
+    //           <img className="username-img" src="./img/person-icon.png" alt="" />
+    //         </div>
+    //         <div className="username">
+    //           <h3 className="name">Name</h3>
+    //           <h4 className="username-set">@Username</h4>
+    //         </div>
+    //       </div>
 
-          <div className="tweet">
-            <p className="tweet-p">Your tweet here!</p>
-          </div>
+    //       <div className="tweet">
+    //         <p className="tweet-p">Your tweet here!</p>
+    //       </div>
 
-          <div className="time">
+    //       <div className="time">
 
-          </div>
+    //       </div>
 
 
-          <div className="arrow">
-            <img className="arrow-icon" src="./img/arrow.png" alt="" />
+    //       <div className="arrow">
+    //         <img className="arrow-icon" src="./img/arrow.png" alt="" />
 
-          </div>
+    //       </div>
 
-          <div className="icons-container">
-            <div className="comment" onClick={() => console.log('You Clicked On Comment')} >
-              <img className="comment-icon" src="./img/Vector.png" alt="" />
-              <h4>44</h4>
-            </div>
-            <div className="retweet" onClick={() => console.log('You Clicked On Retweet')}>
-              <img className="retweet-icon" src="./img/retweet.png" alt="" />
-              <h3>3</h3>
-            </div>
-            <div className="like" onClick={() => console.log('You Clicked On Like')}>
-              <img className="like-icon" src="./img/heart.png" alt="" />
-              <h3>3,500</h3>
-            </div>
-            <div className="share" onClick={() => console.log('You Clicked On Share')}>
-              <img className="share-icon" src="./img/share.png" alt="" />
-            </div>
-          </div>
+    //       <div className="icons-container">
+    //         <div className="comment" onClick={() => console.log('You Clicked On Comment')} >
+    //           <img className="comment-icon" src="./img/Vector.png" alt="" />
+    //           <h4>44</h4>
+    //         </div>
+    //         <div className="retweet" onClick={() => console.log('You Clicked On Retweet')}>
+    //           <img className="retweet-icon" src="./img/retweet.png" alt="" />
+    //           <h3>3</h3>
+    //         </div>
+    //         <div className="like" onClick={() => console.log('You Clicked On Like')}>
+    //           <img className="like-icon" src="./img/heart.png" alt="" />
+    //           <h3>3,500</h3>
+    //         </div>
+    //         <div className="share" onClick={() => console.log('You Clicked On Share')}>
+    //           <img className="share-icon" src="./img/share.png" alt="" />
+    //         </div>
+    //       </div>
 
-        </div>
+    //     </div>
 
-      )
+    //   )
 
-    }
+    // }
 
     //*******************************     END OF COMPONENT BASE REACT   **********************************************************
 
